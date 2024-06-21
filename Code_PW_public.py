@@ -9,6 +9,6 @@ string='xxxxxxxxxx' #mot de passe OPEN
 encoded=string.encode()
 result = hashlib.sha256(encoded)
 m=hashlib.sha256()
-m.update(b"MonMotDePasse")
+m.update(encoded)
 r=m.hexdigest()
 print(r) #imprime la clé de codage à insérer dans le programme principal
